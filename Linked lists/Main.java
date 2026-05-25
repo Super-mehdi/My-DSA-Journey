@@ -1,19 +1,17 @@
 public class Main {
     public static void main(String[] args) {
         /*
-        EXAMPLE
-        Input:3 -> 5 -> 8 -> 5 -> 10 -> 2 -> 1 [partition= 5]
-        Output:3 -> 1 -> 2 -> 10 -> 5 -> 5 -> 8
+            (7-> 1 -> 6) + (5 -> 9 -> 2).That is,617 + 295 = 912
+            Output: 2 -> 1 -> 9. That is, 912.
         */
-        Node head=new Node(3);
-        head.appendToTail(5);
-        head.appendToTail(8);
-        head.appendToTail(5);
-        head.appendToTail(10);
-        head.appendToTail(2);
-        head.appendToTail(1);
-        head.printList();
-        Node newHead=Partition.partition2(head, 5);
-        newHead.printList();
+       Node head1=new Node(7),head2=new Node(5);
+       head1.appendToTail(1);
+       head2.appendToTail(9);
+       head1.appendToTail(6);
+       head2.appendToTail(2);
+       head1.printList();
+       head2.printList();
+       Node head3=SumLists.sumLists2(head1, head2);
+       head3.printList();
     }
 }
