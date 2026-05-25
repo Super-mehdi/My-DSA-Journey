@@ -18,6 +18,38 @@ public class SumLists {
     - sum
     - divisions & new linked list
     */
+   
+
+    public static Node sumLists3(Node head1, Node head2){
+        Node newHead=null;
+        int n=0;
+        Node currNode1=head1,currNode2=head2;
+        while (currNode1!=null || currNode2!=null){
+            int n1=(currNode1!=null)?currNode1.data:0;
+            int n2=(currNode2!=null)?currNode2.data:0;
+            if (newHead == null){
+                newHead = new Node((n1+n2+n)%10);
+            } else {
+                newHead.appendToTail((n1+n2+n)%10);
+            }
+            n=(n1+n2+n)/10;
+            currNode1=(currNode1!=null)?currNode1.next:null;
+            currNode2=(currNode2!=null)?currNode2.next:null;
+        }
+        if (n!=0){
+            newHead.appendToTail(n);
+        }
+        return newHead;
+    }
+
+
+
+
+
+
+
+
+
    public static Node sumLists(Node head1,Node head2){
     StringBuilder numStr1=new StringBuilder(), numStr2=new StringBuilder();
     Node currNode=head1;

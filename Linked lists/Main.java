@@ -11,7 +11,7 @@ public class Main {
        head2.appendToTail(2);
        head1.printList();
        head2.printList();
-       Node head3=SumLists.sumLists2(head1, head2);
+       Node head3=SumLists.sumLists3(head1, head2);
        head3.printList();
     }
 }
