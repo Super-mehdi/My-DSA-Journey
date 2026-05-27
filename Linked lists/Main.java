@@ -9,7 +9,7 @@ public class Main {
        head1.appendToTail(3);
        head1.appendToTail(4);
        head1.printList();
-       Node head=Palindrome.reverseAndCloneList(head1);
+       Node head=Reverse.reverseList(head1);
        head.printList();
     }
 }
