@@ -6,6 +6,11 @@ public class Node {
         data=d;
     }
 
+    public Node(Node node){
+        this(node.data);
+        this.next=node.next;
+    }
+
     void appendToTail(int d){
         Node end = new Node(d);
         Node n = this;
